@@ -4,6 +4,9 @@
 # NPM Dependencies
 node_modules
 
+# Temporary Output Files
+out
+
 # Distribution Folder
 dist
 

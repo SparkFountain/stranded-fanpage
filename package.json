@@ -4,6 +4,7 @@
   "description": "A fanpage for the legendary Stranded game series",
   "main": "src/index.ts",
   "scripts": {
+    "start": "tsc && node out/build-web-app.js",
     "test": "test"
   },
   "keywords": [
@@ -14,6 +15,7 @@
   "author": "SparkFountain",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^20.11.7",
     "sass": "^1.70.0",
     "typescript": "^5.3.3"
   }

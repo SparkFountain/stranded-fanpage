@@ -1,0 +1,17 @@
+/* Font Faces */
+@font-face {
+  font-family: 'JollyLodger';
+  src: url('./assets/fonts/Jolly_Lodger/JollyLodger-Regular.ttf')
+    format('truetype');
+  /* Add other font properties like font-weight and font-style if needed */
+}
+
+html,
+head {
+  height: 100%;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'JollyLodger', sans-serif;
+}
