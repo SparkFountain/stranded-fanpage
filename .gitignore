@@ -1,0 +1,11 @@
+# Visual Studio Code
+.vscode
+
+# NPM Dependencies
+node_modules
+
+# Distribution Folder
+dist
+
+# Webhint
+.hintrc

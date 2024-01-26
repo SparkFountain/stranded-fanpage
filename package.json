@@ -1,0 +1,20 @@
+{
+  "name": "stranded-fanpage",
+  "version": "0.0.1",
+  "description": "A fanpage for the legendary Stranded game series",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "stranded",
+    "survival",
+    "game"
+  ],
+  "author": "SparkFountain",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.70.0",
+    "typescript": "^5.3.3"
+  }
+}
