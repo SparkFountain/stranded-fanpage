@@ -1,0 +1,85 @@
+Offizielles Stranded Changelog von Unreal Software - www.unrealsoftware.de
+
+########## Version 1.30 - 03.03.2006
+
+ [FIXED] Fehler beim Start durch neue EXE
+ [INFO] Die Versionsnummer wurde für diesen Fix NICHT erhöht!
+
+
+
+########## Version 1.30 - 05.12.2003
+
+ [FIXED] Die Objekte Löwenstein, Schildkröten Eier und Kiwi Eier fehlten im Editor
+ [FIXED] Lensflares und eigene Schüsse gingen durch alle "Gebäude"
+ [FIXED] Stacheln töteten Spieler auch, wenn er hoch über sie sprang
+ [FIXED] Soldaten konnten durch jedes Hindernis sehen und schießen
+ [CHANGED] Hintergrundmusik im Menü leiser gemacht
+ [CHANGED] Getreide, Gras und Hanf Grafiken verbessert
+ [ADDED] Sanduhr Grafik beim "Loading"-Screen
+ [ADDED] 1 neue Pflanze: Tanne
+ [ADDED] 1 neues Lebewesen: Vogel
+
+
+
+########## Version 1.20 - 17.09.2003
+
+ [FIXED] Die Gewinnbedingung "Hanf-Opas töten" hat nicht funktioniert
+ [CHANGED] HTML-Hilfe an Design der Website angepasst + Seite für den Editor hinzugefügt
+ [ADDED] 3 neue Pflanzen: 1 Palme und 2 Büsche
+ [ADDED] 2 neue Objekte: Pfahl und kleiner Pfahl
+ [ADDED] 2 neue Lebewesen: Soldat und Eingeborener
+ [ADDED] Minimap im Editor
+
+
+
+########## Version 1.12 - 23.08.2003
+
+ [FIXED] Versionskonflikte beim Laden von Maps
+ [CHANGED] HTML-Hilfe an Design der Website angepasst
+
+
+
+########## Version 1.11 - 18.08.2003
+
+ [FIXED] Fehler beim Fällen von Bäumen/Büschen oder Zerschlagen von Steinen 
+ [FIXED] Steinschleuder konnte nur mit einer Mausrad-Richtung gewählt werden 
+ [FIXED] Äste wiegen nun 500g statt -500g (Bug ist mit Version 1.10 entstanden)
+
+
+
+########## Version 1.10 - 16.08.2003
+
+ [FIXED] mehrere kleine Bugs behoben
+ [CHANGED] Löwen ungefährlicher gemacht
+ [ADDED] Editor hinzugefügt
+ [ADDED] mehrere neue Pflanzen und Tiere
+ [ADDED] 4 neue Werkzeuge bzw. Waffen
+ [ADDED] neue Sounds (Feuer, Quelle, Meer etc.)
+
+
+
+########## Version 1.00 - 31.07.2003
+
+ [RELEASE] Direkt einen Tag nach der Beta das Release der ersten "richtigen" und öffentlichen Stranded Version.
+
+
+
+### Beta - 30.07.2003
+
+ [RELEASE] Release der ersten Beta. Wieder nur Forum intern.
+
+
+
+### diverse Alphas - 08.06.2003 bis 30.07.2003
+
+ [RELEASE] Release mehrerer Alpha Versionen im Forum.
+
+
+
+### Alpha - 08.06.2003
+
+ [RELEASE] Erste Vorstellung des Projektes auf www.blitzforum.de - noch komplett ohne Modells.
+
+
+
+

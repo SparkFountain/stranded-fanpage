@@ -1,0 +1,11 @@
+Soldaten Lager
+Du wurdest gerade von unserem Hubschrauber
+über einer feindlichen Insel abgeworfen.
+Auf dieser Insel scheint sich nach unseren
+Informationen ein großes miliärisches Lager
+des Feindes zu befinden.
+
+Dein Ziel ist es, die Insel zu erkunden und
+bis in das Zentrum des Lagers vorzudringen.
+
+Viel Glück!
