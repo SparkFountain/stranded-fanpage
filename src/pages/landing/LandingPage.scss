@@ -1,0 +1,55 @@
+.landing-container {
+  width: 100%;
+  height: calc(100% - $toolbar-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .logo {
+    width: 547px;
+    height: 247px;
+    background: url('/images/ui/logo.png');
+  }
+
+  .enter {
+    width: 388px;
+    height: 389px;
+    margin-top: -100px;
+    background: url('/images/ui/enter.png');
+    cursor: pointer;
+  }
+}
+
+.info {
+  position: absolute;
+  bottom: 30px;
+  left: 35px;
+
+  font-family: 'Oldenburg', sans-serif;
+  font-size: 15px;
+  color: white;
+}
+
+.disclaimer-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  width: 137px;
+  height: 60px;
+  padding: 0 20px 10px 0;
+  box-sizing: border-box;
+
+  background: url('/images/ui/disclaimer-container.png');
+
+  font-family: 'Oldenburg', sans-serif;
+  font-size: 12px;
+  line-height: 150%;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}

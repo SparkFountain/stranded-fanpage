@@ -4,7 +4,13 @@ import { Breadcrumb } from '../../definitions/interfaces/breadcrumb.interface';
 
 import './Toolbar.scss';
 
-export const Toolbar = ({ breadcrumbs }: { breadcrumbs: Breadcrumb[] }) => {
+export const Toolbar = ({
+  logo,
+  breadcrumbs,
+}: {
+  logo?: boolean;
+  breadcrumbs: Breadcrumb[];
+}) => {
   return (
     <div className="toolbar">
       <div className="toolbar-visual">
@@ -26,9 +32,11 @@ export const Toolbar = ({ breadcrumbs }: { breadcrumbs: Breadcrumb[] }) => {
 
       <div className="toolbar-content">
         <div className="content-group">
-          <Link to="/">
-            <div className="icon home"></div>
-          </Link>
+          {logo && (
+            <Link to="/">
+              <div className="icon home"></div>
+            </Link>
+          )}
 
           <Breadcrumbs breadcrumbs={breadcrumbs} />
         </div>
