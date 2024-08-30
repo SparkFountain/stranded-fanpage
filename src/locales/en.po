@@ -1,0 +1,11 @@
+msgid "welcome"
+msgstr "Welcome to the Stranded Fan Page!"
+
+msgid "enter"
+msgstr "Click on the lifebuoy when you are ready."
+
+msgid "imprint"
+msgstr "Imprint"
+
+msgid "privacy-policy"
+msgstr "Privacy Policy"

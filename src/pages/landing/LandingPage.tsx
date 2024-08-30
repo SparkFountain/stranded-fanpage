@@ -1,13 +1,14 @@
 import { Link } from 'react-router-dom';
 import { App } from '../../components/app/App';
+import { Breadcrumb } from '../../definitions/interfaces/breadcrumb.interface';
 
 import './LandingPage.scss';
-import { Breadcrumb } from '../../definitions/interfaces/breadcrumb.interface';
+import { Trans } from '@lingui/macro';
 
 export const LandingPage = () => {
   const breadcrumbs: Breadcrumb[] = [
     {
-      key: 'Willkommen auf der Stranded Fanpage!',
+      key: <Trans>welcome</Trans>,
     },
   ];
 
@@ -19,12 +20,16 @@ export const LandingPage = () => {
       </div>
 
       <div className="info">
-        Klicke auf den Rettungsring, wenn du bereit bist.
+        <Trans>enter</Trans>
       </div>
 
       <div className="disclaimer-container">
-        <Link to="/imprint">Impressum</Link>
-        <Link to="/privacy-policy">Datenschutz</Link>
+        <Link to="/imprint">
+          <Trans>imprint</Trans>
+        </Link>
+        <Link to="/privacy-policy">
+          <Trans>privacy-policy</Trans>
+        </Link>
       </div>
     </App>
   );
