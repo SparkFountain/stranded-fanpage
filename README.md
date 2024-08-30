@@ -1,50 +1,11 @@
-# React + TypeScript + Vite
+# Stranded Fanpage
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the official fanpage dedicated to the legendary Stranded video game series by Unreal Software! Immerse yourself in the thrilling world where players take on the role of a castaway, navigating the challenges of survival by battling wild animals and strategically crafting tools from found items. Join our community as we celebrate the resilience and ingenuity required to thrive in the captivating and perilous landscapes of the Stranded series.
 
-Currently, two official plugins are available:
+## Work in Progress
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Please note that this fanpage is currently a work in progress as we strive to curate a comprehensive and immersive experience for fans of the Stranded video game series. We appreciate your patience and look forward to unveiling exciting updates and content in the near future.
 
-## Expanding the ESLint configuration
+## License
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+This project is licensed under the MIT License, granting you the freedom to use, modify, and distribute the code in accordance with the terms specified in the license.
