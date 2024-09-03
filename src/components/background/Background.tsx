@@ -4,6 +4,7 @@ import {
   ArcRotateCamera,
   CubeTexture,
   Engine,
+  FreeCamera,
   HemisphericLight,
   MeshBuilder,
   Scene,
@@ -21,16 +22,13 @@ export const Background = () => {
     const engine = new Engine(canvasRef.current, true);
     const scene = new Scene(engine);
 
-    // Create a basic js scene
-    const camera = new ArcRotateCamera(
-      'camera1',
-      Math.PI / 2,
-      Math.PI / 4,
-      4,
-      Vector3.Zero(),
-      scene
-    );
-    camera.position = new Vector3(0, 5, 10);
+    /**
+     * Create a basic scene
+     */
+    const camera = new FreeCamera('camera', new Vector3(0, 5, -10), scene);
+    camera.position = new Vector3(0, 5, 100);
+    camera.minZ = 0.1;
+    camera.maxZ = 1000;
     camera.attachControl(canvasRef.current, true);
 
     const light = new HemisphericLight('light1', new Vector3(1, 1, 0), scene);
@@ -54,10 +52,19 @@ export const Background = () => {
     skybox.material = skyboxMaterial;
 
     /**
-     * Create a sphere
+     * Create a terrain
      */
-    const sphere = MeshBuilder.CreateSphere('sphere', { diameter: 2 }, scene);
-    // sphere.position.y = 1;
+    const terrain = MeshBuilder.CreateGroundFromHeightMap(
+      'gdhm',
+      '/assets/babylonjs/heightmap/heightmap.png',
+      { width: 500, height: 500, subdivisions: 100, maxHeight: 10 },
+      scene
+    );
+    // const terrainTexture = new Texture(
+    //   '/assets/babylonjs/textures/desert.jpg',
+    //   scene
+    // );
+    // terrain.diffuseTexture = terrainTexture;
 
     engine.runRenderLoop(() => {
       scene.render();
