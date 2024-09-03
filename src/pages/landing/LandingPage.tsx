@@ -14,10 +14,10 @@ export const LandingPage = () => {
 
   return (
     <App toolbar logo={false} breadcrumbs={breadcrumbs}>
-      <div className="landing-container">
+      {/* <div className="landing-container">
         <div className="logo"></div>
         <div className="enter"></div>
-      </div>
+      </div> */}
 
       <div className="info">
         <Trans>enter</Trans>

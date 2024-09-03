@@ -29,8 +29,11 @@ a {
 #app {
   width: 100vw;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
 
   background-color: yellow;
+}
+
+#app-content {
+  display: flex;
+  flex-direction: column;
 }

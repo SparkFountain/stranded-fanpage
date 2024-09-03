@@ -1,4 +1,5 @@
 .landing-container {
+  position: absolute;
   width: 100%;
   height: calc(100% - $toolbar-height);
   display: flex;

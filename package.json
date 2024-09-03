@@ -10,6 +10,10 @@
     "messages:extract": "lingui extract"
   },
   "dependencies": {
+    "@babylonjs/core": "^7.23.0",
+    "@babylonjs/gui": "^7.23.0",
+    "@babylonjs/inspector": "^7.23.0",
+    "@babylonjs/loaders": "^7.23.0",
     "@lingui/macro": "^4.11.3",
     "@lingui/react": "^4.11.3",
     "react": "^18.3.1",

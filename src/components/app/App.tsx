@@ -30,11 +30,13 @@ export const App = ({
 
   return (
     <div id="app">
-      <Background>
-        {toolbar && <Toolbar logo={logo} breadcrumbs={breadcrumbs!} />}
+      <Background />
 
+      {/* TODO: currently, only "position: absolute" content is rendered */}
+      <div id="app-content">
+        {toolbar && <Toolbar logo={logo} breadcrumbs={breadcrumbs!} />}
         {children}
-      </Background>
+      </div>
     </div>
   );
 };
