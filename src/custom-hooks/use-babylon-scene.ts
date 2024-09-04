@@ -15,7 +15,7 @@ import { MutableRefObject, useEffect, useRef } from 'react';
 import { loadSkyBox } from '../babylonjs/skybox';
 import { loadTerrain } from '../babylonjs/terrain';
 import { createAmbientLight } from '../babylonjs/light';
-import { addPalmTrees } from '../babylonjs/environment';
+import { addPalmTrees, movePalm } from '../babylonjs/environment';
 
 export const useBabylonScene = (
   canvasRef: MutableRefObject<HTMLCanvasElement | null>
@@ -38,7 +38,8 @@ export const useBabylonScene = (
      * Create a basic scene
      */
     const camera = new FreeCamera('camera', new Vector3(0, 5, -10), scene);
-    camera.position = new Vector3(0, 5, 100);
+    camera.position = new Vector3(70, 50, -50);
+    camera.rotation = new Vector3(Math.PI / 10, 0, 0);
     camera.minZ = 0.1;
     camera.maxZ = 1000;
     camera.attachControl(canvasRef.current, true);
@@ -67,9 +68,12 @@ export const useBabylonScene = (
     /**
      * Create a scene loader and add some models
      */
-    addPalmTrees('palm-01.gltf', 25, scene);
+    for (let i = 1; i <= 5; i++) {
+      addPalmTrees(`palm-0${i}.gltf`, 5, scene);
+    }
 
     engine.runRenderLoop(() => {
+      movePalm(scene);
       scene.render();
     });
 
