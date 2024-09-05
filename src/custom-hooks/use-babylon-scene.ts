@@ -3,7 +3,7 @@ import '@babylonjs/loaders/glTF';
 import { MutableRefObject, useEffect, useRef } from 'react';
 import { loadSkyBox } from '../babylonjs/skybox';
 import { loadTerrain } from '../babylonjs/terrain';
-import { createAmbientLight } from '../babylonjs/light';
+import { createAmbientLight, createSunLight } from '../babylonjs/light';
 import { addPalmTrees, movePalm } from '../babylonjs/environment';
 
 export const useBabylonScene = (
@@ -44,6 +44,9 @@ export const useBabylonScene = (
      */
     createAmbientLight(scene);
 
+    // Create a sun light and get shadow generator
+    const shadowGenerator = createSunLight(scene);
+
     /**
      * Create a skybox
      */
@@ -58,7 +61,7 @@ export const useBabylonScene = (
      * Create a scene loader and add some models
      */
     for (let i = 1; i <= 5; i++) {
-      addPalmTrees(`palm-0${i}.gltf`, 5, scene);
+      addPalmTrees(`palm-0${i}.gltf`, 5, scene, shadowGenerator);
     }
 
     engine.runRenderLoop(() => {

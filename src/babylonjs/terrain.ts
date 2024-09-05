@@ -27,6 +27,7 @@ export const loadTerrain = (
   terrainMaterial.diffuseTexture = terrainTexture;
   terrainMaterial.diffuseColor = new Color3(0.5, 1, 0.5);
   terrain.material = terrainMaterial;
+  terrain.receiveShadows = true;
 
   return terrain;
 };

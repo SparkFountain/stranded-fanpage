@@ -4,10 +4,16 @@ import {
   Mesh,
   Scene,
   SceneLoader,
+  ShadowGenerator,
   Vector3,
 } from '@babylonjs/core';
 
-export const addPalmTrees = (path: string, amount: number, scene: Scene) => {
+export const addPalmTrees = (
+  path: string,
+  amount: number,
+  scene: Scene,
+  shadowGenerator: ShadowGenerator
+) => {
   SceneLoader.ImportMeshAsync(null, '/assets/babylonjs/models/', path, scene)
     .then((result: ISceneLoaderAsyncResult) => {
       const baseMeshes = result.meshes.slice(1) as Mesh[];
@@ -28,11 +34,14 @@ export const addPalmTrees = (path: string, amount: number, scene: Scene) => {
           instance.position = randomPosition;
           instance.scaling = new Vector3(0.4, 0.4, 0.4);
           instance.rotation = new Vector3(Math.PI / 2, 0, 0);
+
+          // Add to shadow generator
+          shadowGenerator.addShadowCaster(instance);
         });
       }
     })
     .catch((error) => {
-      console.error('>>> Failed to load model', error);
+      console.error('>>> Failed to load palm model', error);
     });
 };
 
