@@ -42,6 +42,9 @@ export const Toolbar = ({
         </div>
 
         <div className="toolbar-icons">
+          <div className="icon s1"></div>
+          <div className="icon s2"></div>
+          <div className="icon s3"></div>
           <div className="icon search"></div>
           <div className="icon map"></div>
         </div>
