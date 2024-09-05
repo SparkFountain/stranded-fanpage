@@ -7,6 +7,7 @@ import { router } from './routing';
 
 import { i18n } from '@lingui/core';
 import { I18nProvider } from '@lingui/react';
+import { Background } from './components/background/Background';
 
 // TODO: configure locale later dynamically
 const locale = 'en';
@@ -19,6 +20,7 @@ i18n.activate(locale);
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <I18nProvider i18n={i18n}>
+      <Background />
       <RouterProvider router={router} />
     </I18nProvider>
   </StrictMode>

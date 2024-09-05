@@ -1,6 +1,5 @@
 import { ReactNode } from 'react';
 import { Toolbar } from '../toolbar/Toolbar';
-import { Background } from '../background/Background';
 import { Breadcrumb } from '../../definitions/interfaces/breadcrumb.interface';
 
 export const App = ({
@@ -30,13 +29,8 @@ export const App = ({
 
   return (
     <div id="app">
-      <Background />
-
-      {/* TODO: currently, only "position: absolute" content is rendered */}
-      <div id="app-content">
-        {toolbar && <Toolbar logo={logo} breadcrumbs={breadcrumbs!} />}
-        {children}
-      </div>
+      {toolbar && <Toolbar logo={logo} breadcrumbs={breadcrumbs!} />}
+      {children}
     </div>
   );
 };

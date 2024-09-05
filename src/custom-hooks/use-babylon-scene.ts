@@ -1,15 +1,4 @@
-import {
-  Engine,
-  Scene,
-  FreeCamera,
-  Vector3,
-  HemisphericLight,
-  MeshBuilder,
-  StandardMaterial,
-  Texture,
-  CubeTexture,
-  SceneLoader,
-} from '@babylonjs/core';
+import { Engine, Scene, FreeCamera, Vector3 } from '@babylonjs/core';
 import '@babylonjs/loaders/glTF';
 import { MutableRefObject, useEffect, useRef } from 'react';
 import { loadSkyBox } from '../babylonjs/skybox';
@@ -18,14 +7,14 @@ import { createAmbientLight } from '../babylonjs/light';
 import { addPalmTrees, movePalm } from '../babylonjs/environment';
 
 export const useBabylonScene = (
-  canvasRef: MutableRefObject<HTMLCanvasElement | null>
+  canvasRef: MutableRefObject<HTMLCanvasElement | null>,
+  engineRef: MutableRefObject<Engine | null>,
+  sceneRef: MutableRefObject<Scene | null>
 ) => {
-  // Create engine and scene refs to be used by other hooks
-  const engineRef = useRef<any>(null);
-  const sceneRef = useRef<any>(null);
-
   useEffect(() => {
-    if (!canvasRef.current) return;
+    if (!canvasRef.current || !engineRef) return;
+
+    console.log('>>> Engine initialized');
 
     const engine = new Engine(canvasRef.current, true);
     const scene = new Scene(engine);
