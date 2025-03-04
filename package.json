@@ -3,10 +3,6 @@
   "version": "0.0.1",
   "description": "A fanpage for the legendary Stranded game series",
   "main": "src/index.ts",
-  "scripts": {
-    "start": "tsc && node out/build-web-app.js",
-    "test": "test"
-  },
   "keywords": [
     "stranded",
     "survival",
@@ -14,9 +10,45 @@
   ],
   "author": "SparkFountain",
   "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "tsc && node out/build-web-app.js",
+    "test": "test",
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "messages:extract": "lingui extract"
+  },
+  "dependencies": {
+    "@babylonjs/core": "^7.23.0",
+    "@babylonjs/gui": "^7.23.0",
+    "@babylonjs/inspector": "^7.23.0",
+    "@babylonjs/loaders": "^7.23.0",
+    "@lingui/macro": "^4.11.3",
+    "@lingui/react": "^4.11.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.1"
+  },
   "devDependencies": {
     "@types/node": "^20.11.7",
     "sass": "^1.70.0",
-    "typescript": "^5.3.3"
+    "@eslint/js": "^9.9.0",
+    "@lingui/cli": "^4.11.3",
+    "@lingui/swc-plugin": "^4.0.8",
+    "@lingui/vite-plugin": "^4.11.3",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "babel-plugin-macros": "^3.1.0",
+    "eslint": "^9.9.0",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.9",
+    "globals": "^15.9.0",
+    "sass-embedded": "^1.77.8",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.0.1",
+    "vite": "^5.4.1"
   }
 }
